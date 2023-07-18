@@ -25,7 +25,5 @@
                 // setMessage("Something went wrong! Please try again!");
             });
     })
-    // document.getElementById('the-box').addEventListener('click', function () {
-    //     console.log("You finally clicked without jQuery");
-    // });
+    
 })();

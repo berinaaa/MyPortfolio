@@ -214,6 +214,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="images/NumberGaming.png" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Number Guessing</h3>
+                        <div class="icons">
+                            <a href="" target="_blank" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </section>
@@ -297,7 +310,7 @@
                                 <textarea name="message" id="message" cols="15" rows="8" placeholder="Message Here..."></textarea>
                             </div>
                             <div class="submit-btn">
-                                <a class="main-btn send_email" onclick="sendMessage()">
+                                <a class="main-btn send_email" onclick="sendMessage(event)">
                                     <span class="btn-text">Send</span>
                                     <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
                                 </a>
@@ -306,19 +319,22 @@
                     </div>
                     
                     <script>
-                        function sendMessage() {
-                            var yourName = document.getElementById('yourName').value;
-                            var email = document.getElementById('email').value;
-                            var message = document.getElementById('message').value;
+                        function sendMessage(event) {
+                            event.preventDefault(); // Prevent form submission
                     
-                            if (yourName.trim() === '') {
+                            var yourName = document.getElementById('yourName').value.trim();
+                            var email = document.getElementById('email').value.trim();
+                            var message = document.getElementById('message').value.trim();
+                    
+                            if (yourName === '') {
                                 alert("Please fill in the YOUR NAME field.");
-                            } else if (email.trim() === '') {
+                            } else if (email === '') {
                                 alert("Please fill in the YOUR EMAIL field.");
-                            } else if (message.trim() === '') {
+                            } else if (message === '') {
                                 alert("Please fill in the Message field.");
                             } else {
-                                alert("Your message has been successfully sent!");
+                                // Send email logic here
+                                alert("The message has been successfully sent!");
                             }
                         }
                     </script>

@@ -271,8 +271,10 @@
     transition: all 0.4s ease-in-out;
     width: 60%;
   }
+
   .about-stats .progress-bars .progress-bar .progress-con .progress .html {
-    width: 80%;
+    width: 80%; 
+    transition: all 0.4s ease-in-out;
   }
   .about-stats .progress-bars .progress-bar .progress-con .progress .css {
     width: 75%;
@@ -289,6 +291,7 @@
   .about-stats .progress-bars .progress-bar .progress-con .progress .python {
     width: 25%;
   }
+  
   
   .stat-title {
     text-transform: uppercase;
